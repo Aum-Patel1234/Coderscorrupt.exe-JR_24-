@@ -18,15 +18,62 @@ body{
 }
 .container{
     width: 90vw;
-    height: 85vh;
-    margin: 3.5em 5em 1em 6em;
-    /* background-color: aqua; */
+    height: auto; /* Adjust height to be flexible */
+    margin: 3% 1% 1% 4%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Change to column on smaller screens */
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .left {
+        width: 100%;
+        height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .right{
+        width: 100%;
+    }
+    .container .right img{
+        width: 90%;
+        height: auto;
+    }
+    .container .left .upper .box .text{
+        width: 130%;
+        height: 17vh;
+        
+    }
+    .text textarea{
+        border-right: 0.5em;
+        resize: none
+    }
+    .text textarea::placeholder{
+        font-size: larger;
+        line-height: inherit;
+        color: var(--unhighlight);
+    }
+    .container .left nav{
+        margin: -20.8em 0 0 -2.7em;
+    }
+    .container .left .upper .box .text .btn {
+        margin-top: 2em; /* Adjust the margin-top value as needed */
+    }
+}
+
+.left {
+    width: 50%;
+    height: 85vh;
+}
+
+
 .left{
-    width: 45vw;
+    width: 50%;
     height: 85vh;
     
 }
@@ -87,7 +134,7 @@ body{
 .btn{
     margin-top: 1em;
     /* background-color: blueviolet; */
-    width: 20em;
+    width: 80%;
     height: 4em;
     display: flex;
     justify-content: space-between;
@@ -192,4 +239,34 @@ body{
 }
 .icon input{
     width: 19em;
+}
+@media (max-width: 768px) {
+    .btn2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn2 a {
+        margin-top: 5px;
+    }
+
+    .or {
+        width: 80vw;
+    }
+
+    .line {
+        width: 60vw;
+    }
+
+    .grid button {
+        width: 60vw;
+    }
+
+    .grid span {
+        width: 10vw;
+    }
+
+    .right img {
+        margin-top: 1em;
+    }
 }
